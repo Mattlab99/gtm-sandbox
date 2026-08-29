@@ -6,9 +6,6 @@
 <title>Harbourline</title>
 <link rel="stylesheet" href="assets/style.css">
 
-<!-- STEP 1: paste your GTM head snippet here, replacing GTM-XXXXXXX.
-     Copy it from Admin > Install Google Tag Manager in your container. -->
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,14 +14,13 @@
   })(window,document,'script','dataLayer','GTM-TTHF9KZT');</script>
   <!-- End Google Tag Manager -->
 
-    </head>
+</head>
 <body>
-
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTHF9KZT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
 <header>
   <a class="logo" href="index.html">HARBOURLINE</a>
@@ -32,10 +28,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <main>
-    <h1>New this season</h1>
-    <p>Four products. Enough to learn on.</p>
+
+  <section class="hero">
+    <p class="eyebrow">Spring 2026</p>
+    <h1>Made for the long weekend</h1>
+    <p class="lede">Cotton basics cut a little roomier. Nothing you have to think about
+      before you put it on.</p>
+    <a href="#shop" class="primary button">Shop the range</a>
+  </section>
+
+  <section id="shop" class="band">
+    <h2>New this season</h2>
+    <p class="sub">Four products. Enough to learn on.</p>
     <div id="listing"></div>
+  </section>
+
+  <section class="band alt">
+    <h2>Shop by category</h2>
+    <div class="tiles">
+      <div class="tile"><span>Tops</span><p>Tees, hoodies and the odd rugby stripe.</p></div>
+      <div class="tile"><span>Underwear</span><p>Trunks and briefs, sold in threes.</p></div>
+      <div class="tile"><span>Socks</span><p>Crew, ankle, and the ones that stay up.</p></div>
+    </div>
+  </section>
+
+  <section class="band editorial">
+    <h2>Where the cotton comes from</h2>
+    <p>Every Harbourline tee starts as long-staple cotton grown in the Riverina, spun in
+      Melbourne and knitted on the same circular machines we have used since 2011. Longer
+      fibres mean fewer loose ends, which means a fabric that pills less and holds its
+      shape through more washes than it has any right to.</p>
+    <p>We wash every garment before it leaves the factory. It costs us more and it means
+      the tee you pull out of the bag is the same size as the tee you pull out of the
+      dryer in two years. Most brands skip this step. You find out why the first time you
+      wash a shirt and it comes back a size smaller.</p>
+    <p>None of this is complicated. It is just slower, and slower costs money, which is
+      why most of the industry stopped doing it. We kept doing it because the alternative
+      is selling people something that falls apart, and that turns out to be a worse
+      business than it looks on a spreadsheet.</p>
+    <p>The dye house runs on recycled water. The offcuts go to a mill in Geelong that
+      turns them into industrial felt. We are not going to pretend that makes us a
+      sustainable company, because it does not. It makes us a company that wastes
+      slightly less than it used to, which is a smaller claim and a truer one.</p>
+  </section>
+
+  <section class="band alt">
+    <h2>The details</h2>
+    <div class="tiles">
+      <div class="tile"><span>Free returns</span><p>Thirty days, no questions, prepaid
+        satchel in every order.</p></div>
+      <div class="tile"><span>Made locally</span><p>Cut and sewn in Melbourne. Not a
+        marketing line, an address.</p></div>
+      <div class="tile"><span>Fits like last time</span><p>Pre-washed, so what you get is
+        what you keep.</p></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>Questions we get a lot</h2>
+
+    <div class="faq">
+      <h3>How do the sizes run?</h3>
+      <p>True to size, cut slightly longer in the body. If you are between sizes and want
+        it fitted, size down. If you want it relaxed, stay where you are.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Will the colour fade?</h3>
+      <p>Reactive dyes bond to the fibre rather than sitting on top of it, so the colour
+        goes soft rather than patchy. Wash cold and it will outlast the shirt.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Do you ship outside Australia?</h3>
+      <p>New Zealand only for now. Everywhere else is on the list and has been for a
+        while.</p>
+    </div>
+
+    <div class="faq">
+      <h3>What if it does not fit?</h3>
+      <p>Send it back within thirty days. The satchel is in the box. You do not need to
+        tell us why.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Are the socks really worth twenty-five dollars?</h3>
+      <p>For five pairs, yes. Reinforced heel and toe, and the ribbing is knitted rather
+        than elasticated, which is the bit that usually goes first.</p>
+    </div>
+  </section>
+
+  <section class="band signup">
+    <h2>Nothing much, occasionally</h2>
+    <p>New releases and the odd sale. Roughly once a month, and never on a Sunday.</p>
+    <label>Email <input type="email" placeholder="you@example.com"></label>
+    <button class="primary">Sign up</button>
+  </section>
+
 </main>
+
+<footer>
+  <p>Harbourline is a fictional shop built to practise Google Tag Manager. Nothing here
+    is for sale and no orders are real.</p>
+  <p class="sku">Melbourne, Australia</p>
+</footer>
 
 <script src="assets/shop.js"></script>
 </body>
