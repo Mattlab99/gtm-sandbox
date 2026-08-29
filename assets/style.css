@@ -1,0 +1,76 @@
+/* Deliberately plain. This is a test rig, not a portfolio design piece.
+   Every minute spent on CSS here is a minute not spent on the data layer. */
+
+* { box-sizing: border-box; }
+
+body {
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  margin: 0;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #ddd;
+}
+
+header .logo { font-weight: 700; letter-spacing: 0.02em; }
+header a { color: #1a1a1a; text-decoration: none; }
+header nav { margin-left: auto; }
+
+main { max-width: 900px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+
+h1 { font-size: 1.5rem; margin: 0 0 0.25rem; }
+
+#listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card { text-decoration: none; color: inherit; }
+.card-name { margin-top: 0.5rem; }
+.card-price { color: #555; }
+
+.thumb {
+  background: #f0f0f0;
+  border: 1px solid #e2e2e2;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.thumb.large { height: 260px; max-width: 380px; }
+
+.sku { color: #777; font-size: 0.85rem; margin: 0.25rem 0; }
+.price { font-size: 1.15rem; font-weight: 600; }
+.note { color: #276738; }
+
+label { display: block; margin: 0.75rem 0; max-width: 260px; }
+select, input { display: block; width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+
+.primary {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #fff;
+  border: 0;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 0.75rem;
+}
+
+table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+td { border-bottom: 1px solid #eee; padding: 0.6rem 0; vertical-align: top; }
+td:nth-child(2), td:nth-child(3) { text-align: right; width: 90px; }
