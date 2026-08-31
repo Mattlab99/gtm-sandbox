@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact us | Harbourline</title>
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TTHF9KZT');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+  .form-wrap { max-width: 480px; }
+  .field-error { color: #b3261e; font-size: 0.85rem; margin: 0.25rem 0 0; }
+  textarea { display: block; width: 100%; padding: 0.55rem; margin-top: 0.25rem;
+             font: inherit; min-height: 120px; }
+  #contact-success { background: #eaf5ec; border: 1px solid #b7ddc0; padding: 1.25rem;
+                     margin-top: 1.5rem; }
+  #contact-success h3 { margin: 0 0 0.35rem; }
+  .pending { opacity: 0.6; pointer-events: none; }
+</style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTHF9KZT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+  <a class="logo" href="index.html">HARBOURLINE</a>
+  <nav>
+    <a href="index.html#shop" data-track="nav-shop">Shop</a>
+    <a href="contact.html" data-track="nav-contact">Contact</a>
+    <a href="cart.html" data-track="nav-bag">Bag (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="band">
+    <h1>Contact us</h1>
+    <p class="sub">Returns, sizing, or anything else. We answer within two business days.</p>
+
+    <div class="form-wrap">
+
+      <div id="contact-form">
+        <label>Your name
+          <input type="text" id="cf-name">
+        </label>
+        <p class="field-error" id="err-name" hidden>Please enter your name.</p>
+
+        <label>Email address
+          <input type="email" id="cf-email">
+        </label>
+        <p class="field-error" id="err-email" hidden>Please enter a valid email address.</p>
+
+        <label>What is it about?
+          <select id="cf-subject">
+            <option value="returns">Returns and exchanges</option>
+            <option value="sizing">Sizing help</option>
+            <option value="order">An existing order</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+
+        <label>Message
+          <textarea id="cf-message"></textarea>
+        </label>
+        <p class="field-error" id="err-message" hidden>Please write us a message.</p>
+
+        <button id="cf-submit" class="primary" data-track="contact-submit">Send message</button>
+      </div>
+
+      <div id="contact-success" hidden>
+        <h3>Message sent</h3>
+        <span id="contact-success-message">Thanks, we have your message and will reply
+          within two business days.</span>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><a href="index.html#shop" class="primary button" data-track="footer-cta">Shop the range</a></p>
+  <p>Harbourline is a fictional shop built to practise Google Tag Manager. Nothing here
+    is for sale and no orders are real.</p>
+  <p class="sku">Melbourne, Australia</p>
+</footer>
+
+<script>
+(function () {
+  var form    = document.getElementById('contact-form');
+  var success = document.getElementById('contact-success');
+  var button  = document.getElementById('cf-submit');
+
+  function show(id, on) { document.getElementById(id).hidden = !on; }
+
+  button.addEventListener('click', function () {
+    var name    = document.getElementById('cf-name').value.trim();
+    var email   = document.getElementById('cf-email').value.trim();
+    var message = document.getElementById('cf-message').value.trim();
+
+    var nameBad    = name.length === 0;
+    var emailBad   = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    var messageBad = message.length === 0;
+
+    show('err-name', nameBad);
+    show('err-email', emailBad);
+    show('err-message', messageBad);
+
+    if (nameBad || emailBad || messageBad) return;
+
+    // Pretend to talk to a server. The delay is deliberate: it is why the
+    // confirmation message is a better success signal than the button click.
+    form.classList.add('pending');
+    button.textContent = 'Sending...';
+
+    setTimeout(function () {
+      form.hidden = true;
+      success.hidden = false;
+    }, 900);
+  });
+})();
+</script>
+
+<script src="assets/shop.js"></script>
+</body>
+</html>

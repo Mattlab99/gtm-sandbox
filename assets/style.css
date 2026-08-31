@@ -24,7 +24,10 @@
    
    header .logo { font-weight: 700; letter-spacing: 0.06em; }
    header a { color: #1a1a1a; text-decoration: none; }
-   header nav { margin-left: auto; }
+   header nav { margin-left: auto; display: flex; gap: 1.25rem; align-items: baseline; }
+   header nav a { font-size: 0.95rem; }
+   header nav a:hover { text-decoration: underline; }
+   footer .primary.button { margin-bottom: 1.5rem; }
    
    main { max-width: 900px; margin: 0 auto; padding: 0 1.25rem; }
    
